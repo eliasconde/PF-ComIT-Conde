@@ -49,18 +49,17 @@
 <!--Elementos del formulario-->
 
 <!-- Formulario para datos del perro -->
-<div class="panel panel-default">
-  <div class="panel-heading bg-primary">Datos del perro</div>
-  <div class="panel-body">
-      
-    <form>
-    	
-    	<div class="container">
-  			<div class="row">
-    			<div class="col"> </div>
-    			<div class="col-6">
-      				
-      			<!--Menú desplegable para Color de pelo-->
+<div class="row">
+  <div class="col"> </div>
+  <div class="col-8">
+  
+  <div class="card text-center">
+  <div class="card-header">
+    Datos del perro
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <!--Menú desplegable para Color de pelo-->
             <div class="form-group">
               <label class="col-form-label" for="formGroupExampleInput">Color de pelo</label>
               <div class="btn-group">
@@ -78,6 +77,27 @@
                 </select>
               </div>
             </div>
+     
+    </blockquote>
+  </div>
+  </div>
+
+  </div>
+  <div class="col"> </div>
+</div>  
+
+<div class="panel panel-default">
+  <div class="panel-heading bg-primary">Datos del perro</div>
+  <div class="panel-body">
+      
+    <form>
+    	
+    	<div class="container">
+  			<div class="row">
+    			<div class="col"> </div>
+    			<div class="col-6">
+      				
+      			
     			
     			</div>
    			 	<div class="col"> </div>
