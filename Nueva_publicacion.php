@@ -110,17 +110,25 @@
         </div>    
      
       <!--Botón para cargar foto--> 
-        <div class="form-group">
-          <label for="exampleFormControlFile1">Foto</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
+        <div class="row">
+          <div class="col"> </div>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Foto</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+          <div class="col"> </div>  
+        </div>  
 
       <!--Cuadro de texto para comentario-->  
-        <div class="form-group col-6">
-          <label for="exampleFormControlTextarea1">Comentario</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="row">
+          <div class="col"> </div>
+          <div class="form-group col-6">
+            <label for="exampleFormControlTextarea1">Comentario</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="col"> </div>
         </div>
-          
+
     </blockquote>
   </div>
   </div>
