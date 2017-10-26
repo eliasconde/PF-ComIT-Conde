@@ -139,36 +139,38 @@
 
 
 
-<!-- Formulario para datos del usuario -->
-<div class="panel panel-default">
-  <div class="panel-heading bg-primary">Datos de contacto</div>
-  <div class="panel-body">
-   
-  	<form>
-  		<div class="form-group">
-    		<label class="col-form-label" for="formGroupExampleInput">Nombre</label>
-    		<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de contacto">
-  		</div>
-  		<div class="form-group">
-    		<label class="col-form-label" for="formGroupExampleInput2">Teléfono</label>
-    		<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono de contacto">
-  		</div>
-  		<div class="form-group">
-    		<label class="col-form-label" for="formGroupExampleInput2">E-mail</label>
-    		<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Dirección de correo electrónico de contacto">
-  		</div>
-	</form>
+<!-- Formulario para datos del Usuario -->
+<div class="row">
+  <div class="col"> </div>
+  <div class="col-8">
+  
+  <div class="card text-center">
+  <div class="card-header">
+    Datos del Usuario
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+
+      <!-- Acá van las opciones de logueo de usuario para la publicación -->
+    
+    </blockquote>
+  </div>
+  </div>
 
   </div>
-</div>
+  <div class="col"> </div>
+</div>  
+
 
 <br>
 
-<button type="submit" class="btn btn-primary">Crear Publicación</button>
-
-
-
 <!--Botón para creación de publicación-->
+
+<button type="submit" class="btn btn-primary">Publicar</button>
+
+
+
+
 
 </body>
 </html>
