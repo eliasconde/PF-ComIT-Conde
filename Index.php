@@ -37,8 +37,6 @@
   </div>
 </nav>
 
-<!--Carrusel con las 3 fotos más recientes -->
-
 <!--Texto de presentación de la página-->
 
 <div class="jumbotron jumbotron-fluid">
@@ -47,6 +45,38 @@
     <p class="lead"> Buscador de Perros es una página creada para facilitar la búsqueda de perros perdidos por medio de opciones que harán más cómoda la navegación por las publicaciones. Dentro de la página se podrán ver las publicaciones de perros que están siendo buscados por sus dueños o de mascotas vistas solas por la calle. Se podrán hacer búsquedas filtradas para no tener que recorrer todas las publicaciones de la página y se podrá interactuar con las personas que participen en la búsqueda. También hay una sección Reencuentros donde se podrán ver a los perros con sus dueños gracias a la colaboración de todos. </p>
   </div>
 </div>
+
+<!--Carrusel con las 3 fotos más recientes -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img\293.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img\762.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img\316.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+  </a>
+</div>
+
+<br>
+<br>
 
 <!--Tarjetas con links para navegar la página-->
 
