@@ -13,16 +13,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-  <?php if ($fbauth->isLogin()): ?>
-      <a href="logout.php">Cerrar Sesión</a>
-  <?php else: ?>
-      <a href="<?php echo $fbauth->getAuthUrl(); ?>">Iniciar Sesión </a>
-  <?php endif; ?>  
+<?php if ($fbauth->isLogin()): ?>
+  <a href="logout.php">Cerrar Sesión</a>
+<?php else: ?>
+  <a href="<?php echo $fbauth->getAuthUrl(); ?>">Iniciar Sesión </a>
+<?php endif; ?>
 
 
 <!--Barra de navegación-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -45,8 +45,13 @@
         <a class="nav-link" href="Reencuentros.php">Reencuentros </a>
       </li>
     </ul>
+    <ul class="navbar-nav navbar-right">
+      
+    </ul>
   </div>
 </nav>
+
+
 
 <!--Texto de presentación de la página-->
 
@@ -99,7 +104,7 @@
   			<div class="card-body">
     			<h4 class="card-title">Publicaciones</h4>
     			<p class="card-text">Aquí se podrán ver todas las publicaciones de perros que están siendo buscados o personas que hayan visto a alguno perdido.</p>
-    			<a href="Publicaciones.php" class="btn btn-primary">Ir a Publicaciones</a>
+    			<a href="Publicaciones.php" class="btn btn-dark">Ir a Publicaciones</a>
   			</div>
 		</div>
     </div>
@@ -109,7 +114,7 @@
   			<div class="card-body">
     			<h4 class="card-title">Nueva Publicación</h4>
     			<p class="card-text">Apartado donde se podrán hacer publicaciones tanto de dueños que buscan a su mascota como personas que ven perros perdidos.</p>
-    			<a href="Nueva_publicacion.php" class="btn btn-primary">Ir a Nueva Publicación</a>
+    			<a href="Nueva_publicacion.php" class="btn btn-dark">Ir a Nueva Publicación</a>
   			</div>
 		</div>
   </div>
@@ -120,7 +125,7 @@
   			<div class="card-body">
     			<h4 class="card-title">Buscador</h4>
     			<p class="card-text">Aquí se podrán ver todas las publicaciones de perros que están siendo buscados o personas que hayan visto a alguno perdido.</p>
-    			<a href="Buscador.php" class="btn btn-primary">Ir a Buscador</a>
+    			<a href="Buscador.php" class="btn btn-dark">Ir a Buscador</a>
   			</div>
 		</div>
     </div>
@@ -131,7 +136,7 @@
   			<div class="card-body">
     			<h4 class="card-title">Reencuentros</h4>
     			<p class="card-text">En esta sección se podrán ver los reencuentros de los perros con sus dueños.</p>
-    			<a href="Reencuentros.php" class="btn btn-primary">Ir a Reencuentros</a>
+    			<a href="Reencuentros.php" class="btn btn-dark">Ir a Reencuentros</a>
   			</div>
 		</div>
     </div>

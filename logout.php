@@ -1,9 +1,7 @@
-<?php 
+<?php
+	require_once ('app/init.php');
 
-	require_once('app/init.php');
-
-	$fbauth->signOut();
+	$fbauth -> signOut();
 
 	header("Location: index.php");
-
 ?>
