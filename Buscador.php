@@ -19,7 +19,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Principal <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Principal</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Publicaciones.php">Publicaciones </a>
