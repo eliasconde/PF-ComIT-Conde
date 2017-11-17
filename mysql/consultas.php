@@ -58,7 +58,7 @@
     function recuperarPublicaciones (){
         include 'conexion.php';
         
-        $sql = "SELECT nombre_user, fecha, texto, img_ruta 
+        $sql = "SELECT nombre_user, fecha, texto, img_ruta, id_pub 
                 FROM usuarios, publicaciones, perros 
                 WHERE (publicaciones.reencuentro <> 1) or (publicaciones.cerrada <> 1)
                 INNER JOIN publicaciones ON usuarios.id_user=publicaciones.id_user
@@ -70,28 +70,35 @@
         if (mysqli_num_rows($result) > 0){
             //CREAR CODIGO PARA INSERTAR PUBLICACION EN LA PAGINA
             
-            // HACER UN FOR EACH QUE ME RECORRA $RESULT
-                //TOMO LOS DATOS DE LA FILA QUE ME MUESTRA $RESULT Y LO INSERTO
-                //EN EL CODIGO HTML
-            echo    "<div class='container' id='abc'>";
-            echo       "<div class='row bg-dark'>" ;
-            echo       "<div class='col-md-3'></div>"; 
-            echo       "<div class='col-md-6'>";
-            echo            "<img src='img/img_pub_orig/6B5.jpg'>";
-            echo        "</div>";    
-            echo        "<div class='col-md-3'></div>";
-            echo    "</div>";    
-            echo    "<div class='row bg-info'>";
-            echo        "<div class='col-md-4'><h2>Nombre de usuario</h2></div>";
-            echo        "<div class='col-md-5'></div>";
-            echo        "<div class='col-md-3'><h2>Fecha</h2></div>";
-            echo    "</div>";    
-            echo    "<div class='row bg-light'>";
-            echo        "<p>Comentarios que hizo el usuario que perdió a su mascota y quiere                     encontrarla. Acá va a poner información del perro para que la gente                   pueda tener más precisión del animal.</p>";
-            echo    "</div>";
-            echo    "<div class='fb-comments' data-href='http://localhost/PF-ComIT-Conde/abc'     data-width='100%' data-numposts='3'></div>";
-            echo    "</div>";
-            echo    "<br>";
+            // HACER UN WHILE QUE ME RECORRA TODAS LAS FILAS DE LA BUSQUEDA
+            // TOMO LOS DATOS DE LA FILA QUE ME MUESTRA $RESULT Y LO INSERTO
+            // EN EL CODIGO HTML
+            
+            while ($row = mysqli_fetch_assoc($result)){
+                
+                echo    "<div class='container' id='" . $row["id_pub"] . "'>";
+                echo       "<div class='row bg-dark'>" ;
+                echo       "<div class='col-md-3'></div>"; 
+                echo       "<div class='col-md-6'>";
+                echo            "<img src='img/img_pub_orig/" . $row["img_ruta"] . "'>";
+                echo        "</div>";    
+                echo        "<div class='col-md-3'></div>";
+                echo    "</div>";    
+                echo    "<div class='row bg-info'>";
+                echo        "<div class='col-md-4'><h2>" . $row["nombre_user"] . "</h2></div>";
+                echo        "<div class='col-md-5'></div>";
+                echo        "<div class='col-md-3'><h2>" . $row["fecha"] . "</h2></div>";
+                echo    "</div>";    
+                echo    "<div class='row bg-light'>";
+                echo        "<p>" . $row["texto"] . "</p>";
+                echo    "</div>";
+                echo    "<div class='fb-comments' data-href='http://localhost/PF-ComIT-Conde/" . $row["id_pub"] . "' data-width='100%' data-numposts='3'></div>";
+                echo    "</div>";
+                echo    "<br>";
+
+                
+            }
+            
                        
         } else {
             //NO HAY PUBLICACIONES PARA MOSTRAR, PRESENTAR UN CARTEL

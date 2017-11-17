@@ -9,7 +9,7 @@
 </head>
   
 
-<body>
+<body onload="recuperarPublicaciones();">
     
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -75,9 +75,9 @@
             <div class="col-md-3"></div>
         </div>    
         <div class="row bg-info">
-            <div class="col-md-4"><h2>Nombre de usuario</h2></div>
+            <div class="col-md-4"><h4>Nombre de usuario</h4></div>
             <div class="col-md-5"></div>
-            <div class="col-md-3"><h2>Fecha</h2></div>
+            <div class="col-md-3"><h4>Fecha</h4></div>
         </div>    
         <div class="row bg-light">
             <p>Comentarios que hizo el usuario que perdió a su mascota y quiere encontrarla. Acá va a poner información del perro para que la gente pueda tener más precisión del animal.</p>
