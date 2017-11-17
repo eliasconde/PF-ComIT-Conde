@@ -1,18 +1,21 @@
 <?php
 	
 	// INSERTAR USUARIO
-	public function insertarUsuario ($user, $name, $lastname, $photo){
+	public function insertarUsuario ($idUsuario, $nombreUsuario, $nombre, $apellido){
 		include 'conexion.php';
-
-		$sql = "INSERT INTO usuarios (nombre_user, nombre, apellido, foto) VALUES ($user, $name, $lastname, $photo)";
-
-		if (mysqli_query ($conn, $sql)) {
-			echo "El registro se cargó correctamente";
-		} else { 
-			echo "Error: " .$sql . "<br>" .mysqli_error($conn);
-		}
-
-		mysqli_close($conn);
+    
+        $consulta = "SELECT id_user FROM usuarios WHERE '" . $idUsuario . "'= id_user"; 
+        $result= msqli_query($conn,$consulta);
+    
+        if (msqli_num_rows($result) = 0){
+    
+            $sql = "INSERT INTO usuarios (id_user, nombre_user, nombre, apellido)
+                    VALUES ($idUsuario, $nombreUsuario, $nombre, $apellido)";
+    
+            $result = mysqli_query ($conn, $sql);
+        }
+    
+        mysqli_close($conn);
 	}
 
 	//INSERTAR PERRO
@@ -31,9 +34,14 @@
 	}
 
 	// INSERTAR PUBLICACION
-	public function insertarPublicacion ($fecha, $texto, $reencuentro, $cerrada, $idUser, $idPerro){
+	public function insertarPublicacion ($texto, $idUser, $idPerro){
 		include 'conexion.php';
-
+        
+        // OBTENER LA FECHA ACTUAL --- guardarlo en la variable $fecha
+        
+        $reencuentro = 0;
+        $cerrada = 0;
+        
 		$sql = "INSERT INTO perros (fecha, texto, reencuentro, cerrada, id_user, id_perro) VALUES ($fecha, $texto, $reencuentro, $cerrada, $idUser, $idPerro)";
 
 		if (mysqli_query ($conn, $sql)) {
@@ -45,20 +53,6 @@
 		mysqli_close($conn);
 	}
 
-	// INSERTAR COMENTARIO
-	public function insertarComentario ($nombre, $texto, $fecha, $id_pub){
-		include 'conexion.php';
-
-		$sql = "INSERT INTO comentarios (nombre, texto, fecha, id_pub) VALUES ($nombre, $texto, $fecha, $id_pub)";
-
-		if (mysqli_query ($conn, $sql)) {
-			echo "El registro se cargó correctamente";
-		} else { 
-			echo "Error: " .$sql . "<br>" .mysqli_error($conn);
-		}
-
-		mysqli_close($conn);
-	}
 
     // RECUPERAR PUBLICACIONES
     public function recuperarPublicaciones (){

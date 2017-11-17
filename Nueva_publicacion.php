@@ -124,7 +124,7 @@
         </div><br>
     <!--FOTO-->
         <p>Subir una foto (Opcional)</p>
-        <input type="file" class="form-control-file" id="imagen"><br>
+        <input type="file" class="form-control-file" id="imagen" accept="image/png, .jpeg, .jpg, image/gif"><br>
     <!--COMENTARIOS-->
         <p>Comentarios</p>
         <textarea id="comentario" placeholder="Poné la información que creas necesaria" maxlength="255" rows="3" required></textarea><br>

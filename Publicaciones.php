@@ -60,13 +60,13 @@
   </div>
     
 <!--LISTADO DE PUBLICACIONES-->
-    <div class="container">
+    <div class="container" id="abc">
         <div class="row bg-dark">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
                 <img src="img/img_pub_orig/6B5.jpg">
             </div>    
-            <div class="col-md-1"></div>
+            <div class="col-md-3"></div>
         </div>    
         <div class="row bg-info">
             <div class="col-md-4"><h2>Nombre de usuario</h2></div>
@@ -76,11 +76,11 @@
         <div class="row bg-light">
             <p>Comentarios que hizo el usuario que perdió a su mascota y quiere encontrarla. Acá va a poner información del perro para que la gente pueda tener más precisión del animal.</p>
         </div>
-        <div class="fb-comments" data-href="http://localhost/PF-ComIT-Conde/" data-width="100%" data-numposts="3"></div>
+        <div class="fb-comments" data-href="http://localhost/PF-ComIT-Conde/abc" data-width="100%" data-numposts="3"></div>
     </div>
     <br>
     
-    <div class="container">
+    <div class="container" id="def">
         <div class="row bg-dark">
             <div class="col-md-1 bg-danger"></div>
             <div class="col-md-10 bg-success">
@@ -100,10 +100,10 @@
             <div class="col-md-6 bg-success"></div>
                 
             <div class="col-md-3 bg-warning">
-                <a class="text-right">Cpmentarios</a>
+                <a class="text-right">Comentarios</a>
             </div>
         </div>
-        <div class="fb-comments" data-href="http://localhost/PF-ComIT-Conde/" data-width="100%" data-numposts="3"></div>
+        <div class="fb-comments" data-href="http://localhost/PF-ComIT-Conde/def" data-width="100%" data-numposts="3"></div>
     </div>
 
 
