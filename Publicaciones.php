@@ -1,3 +1,7 @@
+<?php
+    require ("mysql/conexion.php");
+    require ("mysql/consultas.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,6 +64,8 @@
   </div>
     
 <!--LISTADO DE PUBLICACIONES-->
+    
+    
     <div class="container" id="abc">
         <div class="row bg-dark">
             <div class="col-md-3"></div>
