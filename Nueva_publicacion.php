@@ -45,7 +45,7 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-3">Nueva publicación</h1>
-      <p class="lead"> Perdiste a tu perro o encontraste a alguno que te parecía perdido? Creá una nueva publicación para que otras personas puedan verla. Completando los datos de este formulario luego se podrán hascer búsquedas mucho más sencillas. </p>
+      <p class="lead"> Perdiste a tu perro o encontraste a alguno que te parecía perdido? Creá una nueva publicación para que otras personas puedan verla. Completando los datos de este formulario luego se podrán hacer búsquedas mucho más sencillas. </p>
     </div>
   </div>
 
