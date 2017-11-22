@@ -41,7 +41,7 @@
       </ul>
       <ul>
         <?php if (!isset($_SESSION['facebook'])): ?>
-            <a href="<?php echo $helper -> getLoginUrl($config['scopes']); ?>" class="btn btn-primary"> Inciar Sesión </a>
+            <a href="<?php echo $helper -> getLoginUrl($config['scopes']); ?>" class="btn btn-primary"> Iniciar Sesión </a>
         <?php else: ?>
             <a> Bienvenido, <?php echo $facebook_user -> getname(); ?> </a>
             <a href="app/logout.php" class= "btn btn-danger"> Cerrar Sesión </a>
