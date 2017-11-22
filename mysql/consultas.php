@@ -68,12 +68,7 @@
         $result = mysqli_query ($conn, $sql);
         
         if (mysqli_num_rows($result) > 0){
-            //CREAR CODIGO PARA INSERTAR PUBLICACION EN LA PAGINA
-            
-            // HACER UN WHILE QUE ME RECORRA TODAS LAS FILAS DE LA BUSQUEDA
-            // TOMO LOS DATOS DE LA FILA QUE ME MUESTRA $RESULT Y LO INSERTO
-            // EN EL CODIGO HTML
-            
+                        
             while ($row = mysqli_fetch_assoc($result)){
                 
                 echo    "<div class='container' id='" . $row["id_pub"] . "'>";
@@ -102,7 +97,7 @@
                        
         } else {
             //NO HAY PUBLICACIONES PARA MOSTRAR, PRESENTAR UN CARTEL
-            echo "No hay publicaciones para mostrar";
+            echo "<h1>No hay publicaciones para mostrar</h1>";
         }
         
     	mysqli_close($conn);
