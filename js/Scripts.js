@@ -1,11 +1,11 @@
 // JS se encuentra en la Clase 7
 
-function validacion(){
-	
-	var coment = document.getElementById('comentario').value;
+$(function(){
+    if (document.getElementById('sesion').){
+        document.getElementById('boton').style.display = 'enable';
+    }else{
+        document.getElementById('boton').style.display = 'disable';
+    }
+});
 
-	if (coment == "") {
-		alert ("Falta el comentario para la publicación");
-		return false;
-	}
-}
+
