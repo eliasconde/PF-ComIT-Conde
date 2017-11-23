@@ -1,6 +1,8 @@
 <?php
-    require ("mysql/conexion.php");
-    require ("mysql/consultas.php");
+    require 'mysql/conexion.php';
+    require 'mysql/consultas.php';
+    require 'app/start.php';
+
 
 echo "<!DOCTYPE html>";
 echo "echo ";
@@ -64,7 +66,7 @@ echo  "</div>";
     
 //<!--LISTADO DE PUBLICACIONES-->
     
-$sql = "SELECT nombre_user, fecha, texto, img_ruta, id_pub 
+$sql = "SELECT usuarios.id_user, nombre_user, fecha, texto, img_ruta, id_pub 
         FROM usuarios, publicaciones, perros 
         WHERE ((publicaciones.reencuentro <> 1) or (publicaciones.cerrada <> 1))
         AND ((usuarios.id_user = publicaciones.id_user) and (perros.id_perro = publicaciones.id_perro))
@@ -79,7 +81,7 @@ if (mysqli_num_rows($result) > 0){
                 
     while ($row = mysqli_fetch_assoc($result)){
             
-        echo    "<div class='container' id='" . $row["id_pub"] . "'>";
+        echo    "<div class='container'>";
         echo       "<div class='row'>" ;
         echo       "<div class='col-md-3'></div>"; 
         echo       "<div class='col-md-6'>";
@@ -95,6 +97,27 @@ if (mysqli_num_rows($result) > 0){
         echo    "<div class='row bg-light'>";
         echo        "<h5>" . $row["texto"] . "</h5>";
         echo    "</div>";
+            if (isset($_SESSION['facebook'])){    
+                $idUser = $facebook_user -> getId();
+                if ($row['id_user'] = $idUser){
+                      
+                    echo "<div class='row bg-light'>";
+                    echo    "<div class='col-md-9'></div>";
+                    echo    "<div class='col-md-1'>";
+                    echo "<form method='POST' action='mysql/encontrado.php'>";
+                    echo        "<button type='submit' class='btn btn-link' name='boton' value='". $row['id_pub'] ."'>Encontrado</button>";
+                    
+                    echo "</form>";
+                    echo    "</div>";
+                    
+                    echo    "<div class='col-md-2'>";
+                    echo        "<button type='submit' id='cerrar' name='cerrar' class='btn btn-link'>Cerrar Publicación</button>";
+                    echo    "</div>";
+                    echo "</div>";
+                  
+                    
+                }
+            }
         echo    "<div class='fb-comments' data-href='http://localhost/PF-ComIT-Conde/" . $row["id_pub"] . "' data-width='100%' data-numposts='3' data-order-by='reverse_time'></div>";
         echo    "</div>";
         echo    "<br>";
