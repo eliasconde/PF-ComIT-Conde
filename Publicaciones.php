@@ -68,7 +68,8 @@ echo  "</div>";
     
 $sql = "SELECT usuarios.id_user, nombre_user, fecha, texto, img_ruta, id_pub 
         FROM usuarios, publicaciones, perros 
-        WHERE ((publicaciones.reencuentro <> 1) or (publicaciones.cerrada <> 1))
+        WHERE (publicaciones.reencuentro = 0) 
+        AND (publicaciones.cerrada = 0)
         AND ((usuarios.id_user = publicaciones.id_user) and (perros.id_perro = publicaciones.id_perro))
         ORDER BY publicaciones.fecha";
         

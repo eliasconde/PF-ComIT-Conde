@@ -9,15 +9,15 @@ $config ['app_secret'] = 'a40faf90fb8312fd1a827f387a1f3803';
 
 $pub = $_POST['boton'];
 
-$sql = "UPDATE publicaciones SET (reencuento = '1') WHERE (id_pub = " . $pub.")";
+$sql = "UPDATE publicaciones SET reencuentro = 1 WHERE id_pub = ?;";
 echo $sql;
+
+$sentencia = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($sentencia, 's', $pub);
 
 
 // SE EJECUTA LA CONSULTA
-mysqli_query ($conn, $sql);
-
-
+mysqli_stmt_execute($sentencia);
+mysqli_stmt_close($sentencia);
 mysqli_close($conn);
-header('Location: Publicaciones.php');
-
-?>
+header('Location: /PF-ComIT-Conde/Publicaciones.php');
