@@ -44,7 +44,7 @@
             <a href="<?php echo $helper -> getLoginUrl($config['scopes']); ?>" class="btn btn-primary"> Iniciar Sesión </a>
         <?php else: ?>
             <a> Bienvenido, <?php echo $facebook_user -> getname(); ?> </a>
-            <a href="app/logout.php" class= "btn btn-danger"> Cerrar Sesión </a>
+            <a href="app/logout.php" class= "btn btn-success"> Cerrar Sesión </a>
         <?php endif; ?>  
       </ul>
     </div>
@@ -126,7 +126,7 @@
     			<img class="card-img-top" src="img/reencuentros.jpg" alt="Card image cap">
     			<div class="card-body">
       			<h4 class="card-title">Reencuentros</h4>
-      			<p class="card-text">En esta sección se podrán ver los reencuentros de los perros con sus dueños.</p>
+      			<p class="card-text">En esta sección se podrá ver la galería de imágenes de los perros que pudieron volver a sus hogares.</p>
       			<a href="Reencuentros.php" class="btn btn-primary">Ir a Reencuentros</a>
     			</div>
   		</div>
