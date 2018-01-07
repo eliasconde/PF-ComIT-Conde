@@ -192,7 +192,12 @@
             echo    "<div class='row bg-info'>";
             echo        "<div class='col-md-4'><h4>" . $row["nombre_user"] . "</h4></div>";
             echo        "<div class='col-md-5'></div>";
-            echo        "<div class='col-md-3'><h4>" . $row["fecha"] . "</h4></div>";
+            
+            // Se prepara el formato de fecha para mostrar en la publicación
+            setlocale(LC_ALL, 'en_US');
+            $timestamp = strtotime($row['fecha']);
+            $fechaPost = strftime("%d/%m/%Y", $timestamp);
+            
             echo    "</div>";    
             echo    "<div class='row bg-light'>";
             echo        "<h5>" . $row["texto"] . "</h5>";
